@@ -53,7 +53,7 @@ function getFiles(directory) {
 }
 
 // Send emails in batches
-async function sendEmailsInBatches(contacts, files, subject, template, batchSize = 100) {
+async function sendEmailsInBatches(contacts, files, subject, template, batchSize = 450) {
     // const processedEmails = loadProcessedEmails();
 
     for (let i = 0; i < contacts.length; i += batchSize) {
@@ -100,7 +100,7 @@ async function initiateEmailProcess() {
     const subjectFilePath = path.join(directory, 'subject.txt');
 
     if (!fs.existsSync(excelFilePath) || !fs.existsSync(textFilePath) || !fs.existsSync(subjectFilePath)) {
-        console.error("Excel, Text, or Subject file not found!");
+        console.error(`Excel, Text, or Subject file not found! directory: ${directory}`);
         return;
     }
 
