@@ -28,7 +28,6 @@ cd <repository-directory>
 - Install the required Node.js dependencies:
 
 ```sh
-Copy code
 npm install
 Prepare Files
 ```
