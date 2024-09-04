@@ -59,8 +59,9 @@ Running the Script
 
 ``` sh
 node index.js
-To run the script using Docker:
 ```
+To run the script using Docker:
+
 - Build the Docker Image
 
 ```sh
